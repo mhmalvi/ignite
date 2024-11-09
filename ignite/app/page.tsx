@@ -21,43 +21,7 @@ export default function Home() {
     <div className="flex flex-col min-h-screen bg-black text-white overflow-hidden">
 
       <header className="sticky top-0 z-50 bg-black/50 backdrop-blur-lg border-b border-white/10">
-        <div className="container max-w-[2000px] mx-auto px-4 sm:px-6 lg:px-8 xl:px-12 2xl:px-16 flex h-16 items-center justify-between">
-          <Link href="/" className="flex items-center space-x-2">
-            <Flame className="h-8 w-8 text-red-500" />
-            <span className="font-bold text-xl sm:text-2xl bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-orange-500">IGNITE Fitness</span>
-          </Link>
-
-          <nav className="hidden md:flex gap-6">
-            <Link href="/classes" className="text-sm font-medium hover:text-red-500 transition-colors">Classes</Link>
-            <Link href="/trainers" className="text-sm font-medium hover:text-red-500 transition-colors">Trainers</Link>
-            <Link href="/membership" className="text-sm font-medium hover:text-red-500 transition-colors">Membership</Link>
-            <Link href="/events" className="text-sm font-medium hover:text-red-500 transition-colors">Events</Link>
-            <Link href="/booking" className="text-sm font-medium hover:text-red-500 transition-colors">Book Now</Link>
-          </nav>
-
-          <Sheet>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="md:hidden">
-                <Menu className="h-6 w-6" />
-                <span className="sr-only">Open menu</span>
-              </Button>
-            </SheetTrigger>
-
-            <SheetContent side="right" className="bg-gray-900 text-white">
-              <SheetHeader>
-                <SheetTitle className="text-white">Menu</SheetTitle>
-              </SheetHeader>
-              <nav className="flex flex-col gap-4 mt-4">
-                <Link href="/classes" className="text-sm font-medium hover:text-red-500 transition-colors">Classes</Link>
-                <Link href="/trainers" className="text-sm font-medium hover:text-red-500 transition-colors">Trainers</Link>
-                <Link href="/membership" className="text-sm font-medium hover:text-red-500 transition-colors">Membership</Link>
-                <Link href="/events" className="text-sm font-medium hover:text-red-500 transition-colors">Events</Link>
-                <Link href="/booking" className="text-sm font-medium hover:text-red-500 transition-colors">Book Now</Link>
-              </nav>
-            </SheetContent>
-
-          </Sheet>
-        </div>
+        
       </header>
 
       <main className="flex-1">

@@ -1,7 +1,7 @@
 'use client'
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { Button } from "@/components/ui/button"
+import { Button } from "@/ignite/components/ui/button"
 import type { MembershipPlan } from '@/lib/membership/types'
 
 export function PricingCard({ plan }: { plan: MembershipPlan }) {
