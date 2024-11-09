@@ -9,16 +9,27 @@ import {
 
 export function ClassCategories() {
   return (
-    <section className="py-20 bg-gray-900">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-white text-center mb-12">
-          Class Categories
+    <section className="py-20 bg-black/95 relative overflow-hidden">
+      {/* Background gradient similar to class schedule */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-red-500/20 via-transparent to-transparent opacity-30" />
+      
+      <div className="container mx-auto px-4 relative z-10">
+        <h2 className="text-4xl md:text-5xl font-bold text-center mb-16">
+          <span className="bg-clip-text text-transparent bg-gradient-to-r from-red-500 to-orange-500">
+            Class Categories
+          </span>
         </h2>
+        
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Strength Training */}
-          <div className="bg-gray-800/50 rounded-lg p-6 hover:bg-gray-800/70 transition-all duration-300 group">
-            <DumbbellIcon className="w-12 h-12 text-red-500 mb-4 group-hover:scale-110 transition-transform" />
-            <h3 className="text-xl font-semibold text-white mb-2">
+          <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-8 
+                         hover:bg-white/10 transition-all duration-300 group">
+            <div className="p-4 rounded-full bg-gradient-to-r from-red-500/10 to-orange-500/10 
+                          w-fit mb-6 group-hover:scale-110 transition-transform">
+              <DumbbellIcon className="w-8 h-8 text-orange-500" />
+            </div>
+            <h3 className="text-xl font-bold text-white group-hover:text-orange-500 
+                          transition-colors mb-3">
               Strength Training
             </h3>
             <p className="text-gray-400">
@@ -27,9 +38,14 @@ export function ClassCategories() {
           </div>
 
           {/* HIIT */}
-          <div className="bg-gray-800/50 rounded-lg p-6 hover:bg-gray-800/70 transition-all duration-300 group">
-            <ZapIcon className="w-12 h-12 text-red-500 mb-4 group-hover:scale-110 transition-transform" />
-            <h3 className="text-xl font-semibold text-white mb-2">
+          <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-8 
+                         hover:bg-white/10 transition-all duration-300 group">
+            <div className="p-4 rounded-full bg-gradient-to-r from-red-500/10 to-orange-500/10 
+                          w-fit mb-6 group-hover:scale-110 transition-transform">
+              <ZapIcon className="w-8 h-8 text-orange-500" />
+            </div>
+            <h3 className="text-xl font-bold text-white group-hover:text-orange-500 
+                          transition-colors mb-3">
               HIIT
             </h3>
             <p className="text-gray-400">
@@ -38,9 +54,14 @@ export function ClassCategories() {
           </div>
 
           {/* Yoga & Pilates */}
-          <div className="bg-gray-800/50 rounded-lg p-6 hover:bg-gray-800/70 transition-all duration-300 group">
-            <YogaIcon className="w-12 h-12 text-red-500 mb-4 group-hover:scale-110 transition-transform" />
-            <h3 className="text-xl font-semibold text-white mb-2">
+          <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-8 
+                         hover:bg-white/10 transition-all duration-300 group">
+            <div className="p-4 rounded-full bg-gradient-to-r from-red-500/10 to-orange-500/10 
+                          w-fit mb-6 group-hover:scale-110 transition-transform">
+              <YogaIcon className="w-8 h-8 text-orange-500" />
+            </div>
+            <h3 className="text-xl font-bold text-white group-hover:text-orange-500 
+                          transition-colors mb-3">
               Yoga & Pilates
             </h3>
             <p className="text-gray-400">
@@ -49,9 +70,14 @@ export function ClassCategories() {
           </div>
 
           {/* Cardio */}
-          <div className="bg-gray-800/50 rounded-lg p-6 hover:bg-gray-800/70 transition-all duration-300 group">
-            <HeartIcon className="w-12 h-12 text-red-500 mb-4 group-hover:scale-110 transition-transform" />
-            <h3 className="text-xl font-semibold text-white mb-2">
+          <div className="backdrop-blur-xl bg-white/5 border border-white/10 rounded-2xl p-8 
+                         hover:bg-white/10 transition-all duration-300 group">
+            <div className="p-4 rounded-full bg-gradient-to-r from-red-500/10 to-orange-500/10 
+                          w-fit mb-6 group-hover:scale-110 transition-transform">
+              <HeartIcon className="w-8 h-8 text-orange-500" />
+            </div>
+            <h3 className="text-xl font-bold text-white group-hover:text-orange-500 
+                          transition-colors mb-3">
               Cardio
             </h3>
             <p className="text-gray-400">

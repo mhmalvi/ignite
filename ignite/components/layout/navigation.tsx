@@ -44,10 +44,17 @@ export function Navigation() {
 
           {/* CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="ghost" asChild>
+            <Button 
+              variant="outline" 
+              className="border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white transition-colors duration-300"
+              asChild
+            >
               <Link href="/login">Login</Link>
             </Button>
-            <Button className="bg-red-500 hover:bg-red-600" asChild>
+            <Button 
+              className="bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white transition-all duration-300 transform hover:scale-105"
+              asChild
+            >
               <Link href="/signup">Join Now</Link>
             </Button>
           </div>
