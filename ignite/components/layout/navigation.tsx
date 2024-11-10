@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { Button } from '@/components/ui/button'
 import { MobileMenu } from './mobile-menu'
+import { Phone } from 'lucide-react'
 
 export function Navigation() {
   const pathname = usePathname()
@@ -12,59 +13,74 @@ export function Navigation() {
     { href: '/', label: 'Home' },
     { href: '/classes', label: 'Classes' },
     { href: '/trainers', label: 'Trainers' },
-    { href: '/pricing', label: 'Pricing' },
     { href: '/about', label: 'About' },
+    { href: '/contact', label: 'Contact' },
   ]
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-sm border-b border-gray-800">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <Link href="/" className="text-xl font-bold text-white">
-            IGNITE
-          </Link>
+    <>
+      
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className={`text-sm transition-colors ${
-                  pathname === item.href
-                    ? 'text-red-500'
-                    : 'text-white hover:text-red-500'
-                }`}
+      {/* Main Navigation - Fixed below top bar */}
+      <header className="fixed top-0 w-full z-40 bg-black/80 backdrop-blur-sm border-b border-gray-800">
+        <div className="container mx-auto px-4">
+          <div className="flex py-8 items-center justify-between h-10">
+            {/* Logo */}
+            <Link href="/" className="text-xl font-bold text-white">
+              IGNITE
+            </Link>
+
+            {/* Desktop Navigation */}
+            <nav className="hidden md:flex items-center space-x-8">
+              {navItems.map((item) => (
+                <Link
+                  key={item.href}
+                  href={item.href}
+                  className={`text-sm transition-colors ${
+                    pathname === item.href
+                      ? 'text-red-500'
+                      : 'text-white hover:text-red-500'
+                  }`}
+                >
+                  {item.label}
+                </Link>
+              ))}
+            </nav>
+
+            {/* CTA Buttons */}
+            <div className="hidden md:flex items-center space-x-4">
+            
+              <Button 
+                className="
+                  bg-gradient-to-r from-gray-900 to-black 
+                  hover:from-black hover:to-gray-900
+                  text-white 
+                  border-2 border-transparent
+                  [background-clip:padding-box]
+                  relative
+                  after:absolute after:inset-0 
+                  after:p-[2px] 
+                  after:bg-gradient-to-r after:from-red-500 after:to-orange-500 
+                  after:-z-10 after:rounded-md
+                  transition-all duration-300 
+                  hover:scale-105
+                "
+                asChild
               >
-                {item.label}
-              </Link>
-            ))}
-          </nav>
+                <Link href="/signup">Book Now</Link>
+              </Button>
+            </div>
 
-          {/* CTA Buttons */}
-          <div className="hidden md:flex items-center space-x-4">
-            <Button 
-              variant="outline" 
-              className="border-orange-500 text-orange-500 hover:bg-orange-500 hover:text-white transition-colors duration-300"
-              asChild
-            >
-              <Link href="/login">Login</Link>
-            </Button>
-            <Button 
-              className="bg-gradient-to-r from-red-500 to-orange-500 hover:from-red-600 hover:to-orange-600 text-white transition-all duration-300 transform hover:scale-105"
-              asChild
-            >
-              <Link href="/signup">Join Now</Link>
-            </Button>
-          </div>
-
-          {/* Mobile Menu */}
-          <div className="md:hidden">
-            <MobileMenu />
+            {/* Mobile Menu */}
+            <div className="md:hidden">
+              <MobileMenu />
+            </div>
           </div>
         </div>
-      </div>
-    </header>
+      </header>
+
+      {/* Spacer to prevent content from hiding under fixed headers */}
+      <div className="h-[104px]" /> {/* 40px (top bar) + 64px (main nav) */}
+    </>
   )
 } 
