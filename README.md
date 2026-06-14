@@ -1,6 +1,8 @@
 <!-- repo-card -->
 ![ignite](docs/assets/social-card.png)
 
+![ignite — architecture](docs/assets/architecture.png)
+
 <div align="center">
 
 # Ignite
