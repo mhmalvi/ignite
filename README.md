@@ -1,3 +1,6 @@
+<!-- repo-card -->
+![ignite](docs/assets/social-card.png)
+
 <div align="center">
 
 # Ignite
